@@ -4,14 +4,14 @@ class Viewreport extends CI_Controller {
     public function __construct()
     {
 		parent::__construct();
-		$this->load->model('m_barang_keluar');
+		$this->load->model('m_viewreport');
 		$this->load->helper('url');
 
 	}
 
 	public function index()
 	{
-		$data['barang_keluar'] = $this->m_barang_keluar->get_m_barang_views()->result();
+		$data['barang_keluar_detail'] = $this->m_viewreport->get_m_barang_views()->result();
         $this->load->view("admin/viewreport/index",$data);
 
 	}

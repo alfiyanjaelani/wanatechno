@@ -287,6 +287,8 @@
                       <div class="col-sm-8">
                         <form class="user" style="text-align: left;" action="<?php echo base_url(). 'index.php/admin/barangmasuk/tambah_data'; ?>" method="post">
 
+                         <input type="hidden" class="form-control form-control-user" id="petugas" name="petugas" value="<?php echo $this->session->userdata("nama"); ?>">
+
                           <div class="form-group row" >
                             <div class="col-sm-5" >
                               <label>No Document</label>

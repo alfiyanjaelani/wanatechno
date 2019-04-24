@@ -292,21 +292,21 @@
                     </tr>
                   </thead>
                   <tbody>
-                   <?php foreach($barang_keluar as $u){ ?>
+                   <?php foreach($barang_keluar_detail as $u){ ?>
                       <tr>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
-                          <td><?php echo $u->no_document ?></td>
+                          <td><?php echo $u->part_no ?></td>
+                          <td><?php echo $u->part_name ?></td>
+                          <td><?php echo $u->Other ?></td>
+                          <td><?php echo $u->MC ?></td>
+                          <td><?php echo $u->HT ?></td>
+                          <td><?php echo $u->Finishing ?></td>
+                          <td><?php echo $u->Assy ?></td>
+                          <td><?php echo $u->QC ?></td>
+                          <td><?php echo $u->CN ?></td>
+                          <td><?php echo $u->Scrap ?></td>
+                          <td><?php echo $u->Stock ?></td>
+                          <td><?php echo $u->Presentase_Stock ?> %</td>
+                          <td><?php echo $u->Stock_Alert ?></td>
                       </tr>
                   <?php } ?>
        

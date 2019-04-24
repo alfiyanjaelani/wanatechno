@@ -1,5 +1,5 @@
 <?php
-class M_barang_keluar extends CI_Model{
+class M_viewreport extends CI_Model{
 
 	function __construct()
 	{
@@ -32,5 +32,9 @@ class M_barang_keluar extends CI_Model{
 
 	function input_data($data,$table){
 		$this->db->insert($table,$data);
+	}
+
+	function get_m_barang_views(){
+		return $this->db->get('viewsbarang');
 	}
 }

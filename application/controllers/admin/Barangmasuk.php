@@ -36,6 +36,7 @@ class Barangmasuk extends CI_Controller {
 		$qty = $this->input->post('qty');
 		$tanggal = date('Y-m-d', strtotime( $this->input->post('tanggal')));
 		$kode_destination = $this->input->post('kode_destination');
+		$petugas = $this->input->post('petugas');
 		$data = array(
 			'no_document' => $no_document,
 			'lot_no' => $lot_no,
@@ -44,9 +45,26 @@ class Barangmasuk extends CI_Controller {
 			'kode_supplier' => $kode_supplier,
 			'qty' => $qty,
 			'tanggal' => $tanggal,
+			'petugas'=>$petugas,
 			'kode_destination' => $kode_destination
 		);
+
+		// data barang masuk detail
+		$datadetailmasuk = array(
+			'part_no' => $part_no,
+			'total' => $qty,
+			'kode_destination' => $kode_destination
+		);
+
+
+		$where = array(
+			'part_no' => $part_no
+		);
+
+		$this->m_barang_masuk->selecteditstockbarang($part_no,$where,$qty,'mst_barang');
+
 		$this->m_barang_masuk->input_data($data,'trx_barang_masuk');
+		$this->m_barang_masuk->insert_barangmasukdetail($datadetailmasuk,'trx_detail_masuk');
 		redirect('admin/barangmasuk/index');		
 	}
 
